@@ -140,7 +140,7 @@ namespace EasySII.Watcher.Xml
 					{ "FR...X.EX.",         "EasySII.Watcher.Xml.SIICreators.FRIvaImportacion"},
                     { "FR.X...EX.",         "EasySII.Watcher.Xml.SIICreators.FRIvaImportacion" },
 					{ "FR...X..",           "EasySII.Watcher.Xml.SIICreators.FRIvaImportacion"},
-                    { "FR...C.EX.",           "EasySII.Watcher.Xml.SIICreators.FRIvaImportacionAduanasLC"},
+                    { "FR...C.EX.",         "EasySII.Watcher.Xml.SIICreators.FRIvaImportacionAduanasLC"},
                     { "FR....EX.",          "EasySII.Watcher.Xml.SIICreators.FRIvaBase"},
                     { "FR....UE.",          "EasySII.Watcher.Xml.SIICreators.FRIvaIntracom"},
                     { "FR..X..UE.",         "EasySII.Watcher.Xml.SIICreators.FRIvaIntracom"},

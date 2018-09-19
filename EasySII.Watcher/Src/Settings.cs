@@ -148,10 +148,16 @@ namespace EasySII.Watcher
 		[XmlElement("CompanyARInvoiceText")]
 		public string CompanyARInvoiceText { get; set; }
 
-		/// <summary>
-		/// Paises unión europea.
-		/// </summary>
-		[XmlElement("UECountries")]
+        /// <summary>
+        /// Separador de campos del CSV.
+        /// </summary>
+        [XmlElement("CsvFieldSeparator")]
+        public string CsvFieldSeparator { get; set; }
+
+        /// <summary>
+        /// Paises unión europea.
+        /// </summary>
+        [XmlElement("UECountries")]
 		public string UECountries { get; set; }
 
         /// <summary>
@@ -228,6 +234,7 @@ namespace EasySII.Watcher
                 _Current.CompanyTaxID = "B12959755";
 				_Current.CompanyName = "IRENE SOLUTIONS SL";
 				_Current.CompanyARInvoiceText = "ACERO INOXIDABLE";
+                _Current.CsvFieldSeparator = ";";
 				_Current.UECountries = "DE,AT,BE,BG,CY,HR,DK,SK,SI,ES,EE,FI,FR,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,GB,CZ,RO,SE";
 			}
 

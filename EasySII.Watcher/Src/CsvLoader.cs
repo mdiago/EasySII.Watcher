@@ -87,7 +87,8 @@ namespace EasySII.Watcher
 				
 				foreach (var invoice in invoices)
 				{
-					string[] invoiceValues = Clear(invoice.Split(';'));
+					string[] invoiceValues = Clear(
+                        invoice.Split(Settings.Current.CsvFieldSeparator[0]));
 
                     if (invoiceValues.Length == 21)
                     {
@@ -234,15 +235,19 @@ namespace EasySII.Watcher
                 {
                     Envelope envelope = creator.GetEnvelope();
 
-                    string requestPath = $"{Settings.Current.XmlPath}{Path.GetFileName(path)}.{line.ToString().PadLeft(10, '0')}.xml";
+                    string requestPath = $"{Settings.Current.XmlPath}" +
+                        $"{Path.GetFileName(path)}.{line.ToString().PadLeft(10, '0')}.xml";
+
                     SIIParser.GetXml(envelope, requestPath);
 
                     string response = Wsd.Send(envelope);
-                    string responsePath = $"{Settings.Current.InboxPath}{Path.GetFileName(path)}.{line.ToString().PadLeft(10, '0')}.xml";
+
+                    string responsePath = $"{Settings.Current.InboxPath}" +
+                        $"{Path.GetFileName(path)}.{line.ToString().PadLeft(10, '0')}.xml";
+
                     File.WriteAllText(responsePath, response);
 
                     additionalFields = ProcessResponse(responsePath, invoiceLines[0][0]);
-
 
                 }
                 else

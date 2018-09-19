@@ -273,7 +273,8 @@ namespace EasySII.Watcher.Xml.SIICreators
 			DateTime dateFra = Convert.ToDateTime(_InnerDocDataSet[0][2]);
 			DateTime dateImp = Convert.ToDateTime(_InnerDocDataSet[0][2]);
 
-			facturaEmitida.IssueDate = (dateImp > dateFra) ? dateImp : dateFra;  // Fecha factura: La más alta de fecha asiento o fecha impuesto
+            // Fecha factura: La más alta de fecha asiento o fecha impuesto
+            facturaEmitida.IssueDate = (dateImp > dateFra) ? dateImp : dateFra;  
 		}
 	
 
