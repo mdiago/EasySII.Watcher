@@ -32,9 +32,9 @@ Al copiar cualquier archivo XML en la carpeta de salida este será transmitido a
 ### Estructura del fichero CSV para serialización y envío masivo de facturas ###
 
 El archivo CSV se debe componer de 21 columnas y debe estar codificado en Windows ANSI codepage 1252.  
-- Columna 0 (?????):  
-- Columna 1: Documento. Número de factura o documento a procesar.
-- Columna 2: Fecha. Fecha de emisión del documento a procesar.  
+- Columna 00 (?????):  
+- Columna 01: Documento. Número de factura o documento a procesar.
+- Columna 02: Fecha. Fecha de emisión del documento a procesar.  
 - Columna 03: 
 - Columna 04: 
 - Columna 05: NIF contraparte. Identificador fiscal de la contraparte.
@@ -47,10 +47,10 @@ El archivo CSV se debe componer de 21 columnas y debe estar codificado en Window
 - Columna 12:
 - Columna 13:
 - Columna 14: Número factura rectificada. Número de la factura rectificada para rectificaciones de facturas emitidas.
-- Columna 15: Fecha factura rectificada. Fecha de la factura rectificada para rectificaciones de facturas emitidas.
+- Columna 15: Fecha operación / Fecha factura rectificada. Cuando se trata de una factua rectificativa (existe un número de factura    rectificada en la columna 14) esta columna se utiliza como la fecha de la factura rectificada. Si la columna 14 está vacía, esta columna se entiende como Fecha operación.
 - Columna 16:
 - Columna 17: País. Código ISO de pais de la contraparte de la operación.
 - Columna 18:
-- Columna 19:
+- Columna 19: Tipo factura. F1 (Factura), F2 (Factura Simplificada), R1 (Factura Rectificativa Art 80.1 y 80.2 y error fundado en derecho) ...
 - Columna 20:
 
