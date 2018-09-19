@@ -13,3 +13,23 @@ La aplicación consiste en un Servicio de Windows que monitorea continuamente un
 
 Lo primero que necesita el software para trabajar es acceso a un certificado digital válido para la comunicación con la AEAT. Al tratarse de un servicio de windows, hay que asegurarse que la cuenta de usuario con la que corre, tiene acceso al certificado. Para ello debemos asegurarnos de que el mismo está instalado en el almacén de certificados de 'Local Machine'.
 
+* Ubicación por defecto carpeta de salida
+
+La ubicación por defecto de la carpeta de salida está en la ruta: C:\ProgramData\EasySIIWatcher\Outbox. Se puede cambiar mediante las opciones de configuración del programa.
+
+* Ubicación por defecto carpeta de entrada
+
+La ubicación por defecto de la carpeta de salida está en la ruta: C:\ProgramData\EasySIIWatcher\Inbox. Se puede cambiar mediante las opciones de configuración del programa.
+
+* Ubicación por defecto carpeta de enviados
+
+La ubicación por defecto de la carpeta de salida está en la ruta: C:\ProgramData\EasySIIWatcher\History. Se puede cambiar mediante las opciones de configuración del programa.
+
+* Utilización básica del servicio
+
+Al copiar cualquier archivo XML en la carpeta de salida este será transmitido al SII. Si el fichero creado es un archivo CSV, este se utilizará para la creación y envío de los archivos XML al SII.
+
+* Estructura del fichero CSV para serialización y envío masivo de facturas
+
+El archivo CSV se debe componer de 25 columnas.
+
