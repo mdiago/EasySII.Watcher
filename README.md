@@ -1,17 +1,8 @@
 # README #
 
-### What is this repository for? ###
+### Introducción a EasySII Monitor ###
 
-* Quick summary
-
-EasySII la bibiblioteca .net para el SII de la AEAT
-
-Existe gran revuelo en referencia al Suministro Inmediato de Información.
-Desde que la Agencia Tributaria Española anunció su puesta en marcha, mucho es lo que se está hablando de él, y mucha la polémica generada. Entendemos que desde la perspectiva del área de finanzas, varios son los aspectos preocupantes y que pueden entorpecer a los departamentos encargados de la gestión administrativa.
-
-Ahora bien, desde la perspectiva técnica se trata de un problema relativamente sencillo de resolver. Las especificaciones son lo suficientemente claras y precisas, no existen un número muy amplio de mensajes a desarrollar y las pruebas que hemos realizado con los serivicos web de la AEAT, han funcionado perfectamente.
-
-Esperamos que os descargueis nuestra biblioteca y el proyecto de prueba con el que viene, y la podais adaptar a vuestras empresas sin problemas, para resolver los problemas de serialización xml y de comunicaciones relacionados con el nuevo sistema de suministro inmediato de información de la Agencia Tributaria Española.
+Esta aplicación es un ejemplo del uso de la biblioteca EasySII para la serialización XML y gestión de comunicaciones con el SII de la AEAT. Utiliza EasySII para la gestión de envíos de ficheros XML al SII de la AEAT. Consiste en un Servicio de Windows que monitorea continuamente una carpeta de salida configurada en el sistema. En el momento en el que una archivo XML es creado en la carpeta de salida, este se transfiere al SII, se recupera la respuesta que queda almacenada en una carpeta de entrada, y el fichero XML de salida se archiva en una carpeta de fichero enviados.
 
 * Version
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
