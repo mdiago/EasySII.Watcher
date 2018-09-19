@@ -9,27 +9,7 @@ La aplicación consiste en un Servicio de Windows que monitorea continuamente un
 
 ### Inicio Rápido ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Instalación del certificado digital
 
-### Contribution guidelines ###
+Lo primero que necesita el software para trabajar es acceso a un certificado digital válido para la comunicación con la AEAT. Al tratarse de un servicio de windows, hay que asegurarse que la cuenta de usuario con la que corre, tiene acceso al certificado. Para ello debemos asegurarnos de que el mismo está instalado en el almacén de certificados de 'Local Machine'.
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-
-Manuel Diago García
-
-* Other community or team contact
-
-Oscar Valor
-
-Julio Carballo Alomar
