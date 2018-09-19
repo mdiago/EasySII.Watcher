@@ -48,9 +48,9 @@ El archivo CSV se debe componer de 21 columnas y debe estar codificado en Window
 - Columna 13: Indicador de importación. 'X' para indicar de que se trata de una liquidación de IVA de aduana normal (en este caso se incluye como contraparte a la empresa informadora, y se incluye el número de DUA como número de documento). 'LC' para indicar que se trata de una liquidación complementaria de aduanas.
 - Columna 14: Número factura rectificada. Número de la factura rectificada para rectificaciones de facturas emitidas.
 - Columna 15: Fecha operación / Fecha factura rectificada. Cuando se trata de una factua rectificativa (existe un número de factura    rectificada en la columna 14) esta columna se utiliza como la fecha de la factura rectificada. Si la columna 14 está vacía, esta columna se entiende como Fecha operación.
-- Columna 16:
+- Columna 16: Dirección operador. Únicamente se informa para los tipos de documento 'OI'.
 - Columna 17: País. Código ISO de pais de la contraparte de la operación.
-- Columna 18:
+- Columna 18: Indicador de alquiler. 'X' en el caso de que se trate de una factura emitida por alquiler.
 - Columna 19: Tipo factura. F1 (Factura), F2 (Factura Simplificada), R1 (Factura Rectificativa Art 80.1 y 80.2 y error fundado en derecho) ...
-- Columna 20:
+- Columna 20: Indicador de autofactura. 'X' si se trata de una autofactura.
 
