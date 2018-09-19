@@ -68,7 +68,7 @@ namespace EasySII.Watcher.Admin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbMain = new System.Windows.Forms.TabControl();
             this.tbGeneral = new System.Windows.Forms.TabPage();
             this.btLogPathOpen = new System.Windows.Forms.Button();
@@ -100,6 +100,10 @@ namespace EasySII.Watcher.Admin
             this.IssuerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dlgOpenDir = new System.Windows.Forms.FolderBrowserDialog();
             this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
+            this.txTaxID = new System.Windows.Forms.TextBox();
+            this.txName = new System.Windows.Forms.TextBox();
+            this.lbTaxID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbMain.SuspendLayout();
             this.tbGeneral.SuspendLayout();
             this.tbOptions.SuspendLayout();
@@ -114,11 +118,15 @@ namespace EasySII.Watcher.Admin
             this.tbMain.Location = new System.Drawing.Point(0, 0);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
-            this.tbMain.Size = new System.Drawing.Size(621, 349);
+            this.tbMain.Size = new System.Drawing.Size(621, 387);
             this.tbMain.TabIndex = 0;
             // 
             // tbGeneral
             // 
+            this.tbGeneral.Controls.Add(this.label1);
+            this.tbGeneral.Controls.Add(this.lbTaxID);
+            this.tbGeneral.Controls.Add(this.txName);
+            this.tbGeneral.Controls.Add(this.txTaxID);
             this.tbGeneral.Controls.Add(this.btLogPathOpen);
             this.tbGeneral.Controls.Add(this.btHistoryPathOpen);
             this.tbGeneral.Controls.Add(this.btXmlPathOpen);
@@ -143,7 +151,7 @@ namespace EasySII.Watcher.Admin
             this.tbGeneral.Location = new System.Drawing.Point(4, 22);
             this.tbGeneral.Name = "tbGeneral";
             this.tbGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.tbGeneral.Size = new System.Drawing.Size(613, 323);
+            this.tbGeneral.Size = new System.Drawing.Size(613, 361);
             this.tbGeneral.TabIndex = 0;
             this.tbGeneral.Text = "General";
             this.tbGeneral.UseVisualStyleBackColor = true;
@@ -154,7 +162,7 @@ namespace EasySII.Watcher.Admin
             this.btLogPathOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btLogPathOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogPathOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogPathOpen.Location = new System.Drawing.Point(568, 280);
+            this.btLogPathOpen.Location = new System.Drawing.Point(563, 323);
             this.btLogPathOpen.Name = "btLogPathOpen";
             this.btLogPathOpen.Size = new System.Drawing.Size(36, 20);
             this.btLogPathOpen.TabIndex = 20;
@@ -167,7 +175,7 @@ namespace EasySII.Watcher.Admin
             this.btHistoryPathOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btHistoryPathOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHistoryPathOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHistoryPathOpen.Location = new System.Drawing.Point(568, 230);
+            this.btHistoryPathOpen.Location = new System.Drawing.Point(563, 273);
             this.btHistoryPathOpen.Name = "btHistoryPathOpen";
             this.btHistoryPathOpen.Size = new System.Drawing.Size(36, 20);
             this.btHistoryPathOpen.TabIndex = 19;
@@ -180,7 +188,7 @@ namespace EasySII.Watcher.Admin
             this.btXmlPathOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btXmlPathOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXmlPathOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXmlPathOpen.Location = new System.Drawing.Point(568, 176);
+            this.btXmlPathOpen.Location = new System.Drawing.Point(563, 219);
             this.btXmlPathOpen.Name = "btXmlPathOpen";
             this.btXmlPathOpen.Size = new System.Drawing.Size(36, 20);
             this.btXmlPathOpen.TabIndex = 18;
@@ -193,7 +201,7 @@ namespace EasySII.Watcher.Admin
             this.btInboxOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btInboxOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInboxOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btInboxOpen.Location = new System.Drawing.Point(568, 75);
+            this.btInboxOpen.Location = new System.Drawing.Point(563, 118);
             this.btInboxOpen.Name = "btInboxOpen";
             this.btInboxOpen.Size = new System.Drawing.Size(36, 20);
             this.btInboxOpen.TabIndex = 17;
@@ -206,7 +214,7 @@ namespace EasySII.Watcher.Admin
             this.btOutboxOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btOutboxOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOutboxOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOutboxOpen.Location = new System.Drawing.Point(568, 32);
+            this.btOutboxOpen.Location = new System.Drawing.Point(563, 75);
             this.btOutboxOpen.Name = "btOutboxOpen";
             this.btOutboxOpen.Size = new System.Drawing.Size(36, 20);
             this.btOutboxOpen.TabIndex = 16;
@@ -217,7 +225,7 @@ namespace EasySII.Watcher.Admin
             // 
             this.btLogPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btLogPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogPath.Location = new System.Drawing.Point(527, 280);
+            this.btLogPath.Location = new System.Drawing.Point(522, 323);
             this.btLogPath.Name = "btLogPath";
             this.btLogPath.Size = new System.Drawing.Size(36, 20);
             this.btLogPath.TabIndex = 15;
@@ -228,7 +236,7 @@ namespace EasySII.Watcher.Admin
             // txLogPath
             // 
             this.txLogPath.Enabled = false;
-            this.txLogPath.Location = new System.Drawing.Point(20, 280);
+            this.txLogPath.Location = new System.Drawing.Point(15, 323);
             this.txLogPath.Name = "txLogPath";
             this.txLogPath.Size = new System.Drawing.Size(502, 20);
             this.txLogPath.TabIndex = 14;
@@ -236,7 +244,7 @@ namespace EasySII.Watcher.Admin
             // lbLogPath
             // 
             this.lbLogPath.AutoSize = true;
-            this.lbLogPath.Location = new System.Drawing.Point(20, 262);
+            this.lbLogPath.Location = new System.Drawing.Point(15, 305);
             this.lbLogPath.Name = "lbLogPath";
             this.lbLogPath.Size = new System.Drawing.Size(258, 13);
             this.lbLogPath.TabIndex = 13;
@@ -246,7 +254,7 @@ namespace EasySII.Watcher.Admin
             // 
             this.btHistoryPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btHistoryPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHistoryPath.Location = new System.Drawing.Point(527, 230);
+            this.btHistoryPath.Location = new System.Drawing.Point(522, 273);
             this.btHistoryPath.Name = "btHistoryPath";
             this.btHistoryPath.Size = new System.Drawing.Size(36, 20);
             this.btHistoryPath.TabIndex = 12;
@@ -257,7 +265,7 @@ namespace EasySII.Watcher.Admin
             // txHistoryPath
             // 
             this.txHistoryPath.Enabled = false;
-            this.txHistoryPath.Location = new System.Drawing.Point(20, 230);
+            this.txHistoryPath.Location = new System.Drawing.Point(15, 273);
             this.txHistoryPath.Name = "txHistoryPath";
             this.txHistoryPath.Size = new System.Drawing.Size(502, 20);
             this.txHistoryPath.TabIndex = 11;
@@ -265,7 +273,7 @@ namespace EasySII.Watcher.Admin
             // lbHistoryPath
             // 
             this.lbHistoryPath.AutoSize = true;
-            this.lbHistoryPath.Location = new System.Drawing.Point(20, 212);
+            this.lbHistoryPath.Location = new System.Drawing.Point(15, 255);
             this.lbHistoryPath.Name = "lbHistoryPath";
             this.lbHistoryPath.Size = new System.Drawing.Size(414, 13);
             this.lbHistoryPath.TabIndex = 10;
@@ -276,7 +284,7 @@ namespace EasySII.Watcher.Admin
             // 
             this.btXmlPath.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXmlPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXmlPath.Location = new System.Drawing.Point(527, 176);
+            this.btXmlPath.Location = new System.Drawing.Point(522, 219);
             this.btXmlPath.Name = "btXmlPath";
             this.btXmlPath.Size = new System.Drawing.Size(36, 20);
             this.btXmlPath.TabIndex = 9;
@@ -287,7 +295,7 @@ namespace EasySII.Watcher.Admin
             // txXmlPath
             // 
             this.txXmlPath.Enabled = false;
-            this.txXmlPath.Location = new System.Drawing.Point(20, 176);
+            this.txXmlPath.Location = new System.Drawing.Point(15, 219);
             this.txXmlPath.Name = "txXmlPath";
             this.txXmlPath.Size = new System.Drawing.Size(502, 20);
             this.txXmlPath.TabIndex = 8;
@@ -295,7 +303,7 @@ namespace EasySII.Watcher.Admin
             // lbXmlPath
             // 
             this.lbXmlPath.AutoSize = true;
-            this.lbXmlPath.Location = new System.Drawing.Point(20, 158);
+            this.lbXmlPath.Location = new System.Drawing.Point(15, 201);
             this.lbXmlPath.Name = "lbXmlPath";
             this.lbXmlPath.Size = new System.Drawing.Size(488, 13);
             this.lbXmlPath.TabIndex = 7;
@@ -305,7 +313,7 @@ namespace EasySII.Watcher.Admin
             // ckTest
             // 
             this.ckTest.AutoSize = true;
-            this.ckTest.Location = new System.Drawing.Point(25, 120);
+            this.ckTest.Location = new System.Drawing.Point(20, 163);
             this.ckTest.Name = "ckTest";
             this.ckTest.Size = new System.Drawing.Size(422, 17);
             this.ckTest.TabIndex = 6;
@@ -316,7 +324,7 @@ namespace EasySII.Watcher.Admin
             // 
             this.btInbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btInbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btInbox.Location = new System.Drawing.Point(527, 75);
+            this.btInbox.Location = new System.Drawing.Point(522, 118);
             this.btInbox.Name = "btInbox";
             this.btInbox.Size = new System.Drawing.Size(36, 20);
             this.btInbox.TabIndex = 5;
@@ -327,7 +335,7 @@ namespace EasySII.Watcher.Admin
             // txInbox
             // 
             this.txInbox.Enabled = false;
-            this.txInbox.Location = new System.Drawing.Point(20, 75);
+            this.txInbox.Location = new System.Drawing.Point(15, 118);
             this.txInbox.Name = "txInbox";
             this.txInbox.Size = new System.Drawing.Size(502, 20);
             this.txInbox.TabIndex = 4;
@@ -335,7 +343,7 @@ namespace EasySII.Watcher.Admin
             // lbInbox
             // 
             this.lbInbox.AutoSize = true;
-            this.lbInbox.Location = new System.Drawing.Point(17, 58);
+            this.lbInbox.Location = new System.Drawing.Point(12, 101);
             this.lbInbox.Name = "lbInbox";
             this.lbInbox.Size = new System.Drawing.Size(482, 13);
             this.lbInbox.TabIndex = 3;
@@ -346,7 +354,7 @@ namespace EasySII.Watcher.Admin
             // 
             this.btOutbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btOutbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOutbox.Location = new System.Drawing.Point(527, 32);
+            this.btOutbox.Location = new System.Drawing.Point(522, 75);
             this.btOutbox.Name = "btOutbox";
             this.btOutbox.Size = new System.Drawing.Size(36, 20);
             this.btOutbox.TabIndex = 2;
@@ -357,18 +365,18 @@ namespace EasySII.Watcher.Admin
             // txOutbox
             // 
             this.txOutbox.Enabled = false;
-            this.txOutbox.Location = new System.Drawing.Point(20, 32);
+            this.txOutbox.Location = new System.Drawing.Point(15, 75);
             this.txOutbox.Name = "txOutbox";
             this.txOutbox.Size = new System.Drawing.Size(502, 20);
-            this.txOutbox.TabIndex = 1;
+            this.txOutbox.TabIndex = 3;
             // 
             // lbOutbox
             // 
             this.lbOutbox.AutoSize = true;
-            this.lbOutbox.Location = new System.Drawing.Point(17, 14);
+            this.lbOutbox.Location = new System.Drawing.Point(12, 57);
             this.lbOutbox.Name = "lbOutbox";
             this.lbOutbox.Size = new System.Drawing.Size(417, 13);
-            this.lbOutbox.TabIndex = 0;
+            this.lbOutbox.TabIndex = 99;
             this.lbOutbox.Text = "Los archivos XML o CSV que se guarden en esta carpeta serán transmitidos a la AEA" +
     "T";
             // 
@@ -379,7 +387,7 @@ namespace EasySII.Watcher.Admin
             this.tbOptions.Location = new System.Drawing.Point(4, 22);
             this.tbOptions.Name = "tbOptions";
             this.tbOptions.Padding = new System.Windows.Forms.Padding(3);
-            this.tbOptions.Size = new System.Drawing.Size(613, 323);
+            this.tbOptions.Size = new System.Drawing.Size(613, 361);
             this.tbOptions.TabIndex = 1;
             this.tbOptions.Text = "Certificado almacén de windows";
             this.tbOptions.UseVisualStyleBackColor = true;
@@ -404,14 +412,14 @@ namespace EasySII.Watcher.Admin
             this.Thumbprint,
             this.SubjectName,
             this.IssuerName});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdCertificates.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdCertificates.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdCertificates.Location = new System.Drawing.Point(9, 68);
             this.grdCertificates.MultiSelect = false;
             this.grdCertificates.Name = "grdCertificates";
@@ -439,11 +447,44 @@ namespace EasySII.Watcher.Admin
             this.IssuerName.Name = "IssuerName";
             this.IssuerName.Width = 275;
             // 
+            // txTaxID
+            // 
+            this.txTaxID.Location = new System.Drawing.Point(15, 30);
+            this.txTaxID.Name = "txTaxID";
+            this.txTaxID.Size = new System.Drawing.Size(113, 20);
+            this.txTaxID.TabIndex = 21;
+            this.txTaxID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txTaxID_KeyDown);
+            // 
+            // txName
+            // 
+            this.txName.Location = new System.Drawing.Point(134, 30);
+            this.txName.Name = "txName";
+            this.txName.Size = new System.Drawing.Size(465, 20);
+            this.txName.TabIndex = 1;
+            // 
+            // lbTaxID
+            // 
+            this.lbTaxID.AutoSize = true;
+            this.lbTaxID.Location = new System.Drawing.Point(17, 14);
+            this.lbTaxID.Name = "lbTaxID";
+            this.lbTaxID.Size = new System.Drawing.Size(103, 13);
+            this.lbTaxID.TabIndex = 0;
+            this.lbTaxID.Text = "NIF empresa envíos";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(131, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 13);
+            this.label1.TabIndex = 100;
+            this.label1.Text = "Nombre empresa envíos";
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 349);
+            this.ClientSize = new System.Drawing.Size(621, 387);
             this.Controls.Add(this.tbMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -454,6 +495,7 @@ namespace EasySII.Watcher.Admin
             this.Text = "MONITOR COMUNICACIONES SII AEAT";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formMain_FormClosing);
             this.Load += new System.EventHandler(this.formMain_Load);
+            this.Shown += new System.EventHandler(this.formMain_Shown);
             this.tbMain.ResumeLayout(false);
             this.tbGeneral.ResumeLayout(false);
             this.tbGeneral.PerformLayout();
@@ -496,5 +538,9 @@ namespace EasySII.Watcher.Admin
         private System.Windows.Forms.Button btHistoryPathOpen;
         private System.Windows.Forms.Button btXmlPathOpen;
         private System.Windows.Forms.Button btInboxOpen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTaxID;
+        private System.Windows.Forms.TextBox txName;
+        private System.Windows.Forms.TextBox txTaxID;
     }
 }

@@ -98,6 +98,9 @@ namespace EasySII.Watcher.Admin
 
             EasySII.Settings.Current.CertificateThumbprint = GetSelectedCertificateThumbprint();
 
+            EasySII.Watcher.Settings.Current.CompanyTaxID = txTaxID.Text;
+            EasySII.Watcher.Settings.Current.CompanyName = txName.Text;
+
             EasySII.Settings.Save();
             EasySII.Watcher.Settings.Save();
 
@@ -125,7 +128,10 @@ namespace EasySII.Watcher.Admin
                 txLogPath.Text = EasySII.Watcher.Settings.Current.LogPath;
 
             ckTest.Checked = (EasySII.Settings.Current.SiiEndPointPrefix == 
-                SiiEndPointPrefixes.Test);            
+                SiiEndPointPrefixes.Test);
+
+            txTaxID.Text = EasySII.Watcher.Settings.Current.CompanyTaxID;
+            txName.Text = EasySII.Watcher.Settings.Current.CompanyName;
 
         }
 
@@ -221,6 +227,7 @@ namespace EasySII.Watcher.Admin
 
                 LoadSettings();
                 FillCertificates();
+
             }
             catch (Exception ex)
             {
@@ -283,6 +290,22 @@ namespace EasySII.Watcher.Admin
         {
             if (Directory.Exists(txLogPath.Text))
                 Process.Start("explorer.exe", txLogPath.Text);
+        }
+
+        private void txTaxID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txName.Focus();
+                txName.SelectAll();
+                e.Handled = e.SuppressKeyPress = true;
+            }
+        }
+
+        private void formMain_Shown(object sender, EventArgs e)
+        {
+            txTaxID.Focus();
+            txTaxID.SelectAll();
         }
     }
 }

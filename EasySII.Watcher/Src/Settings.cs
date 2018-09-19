@@ -225,8 +225,8 @@ namespace EasySII.Watcher
                 _Current.XmlPath = Path + "XmlPath\\";
                 _Current.LogPath = Path + "Log\\";
                 _Current.ErrPath = Path + "Err\\";
-                _Current.CompanyTaxID = "A48663546";
-				_Current.CompanyName = "ACEROS INOXIDABLES OLARRA SA";
+                _Current.CompanyTaxID = "B12959755";
+				_Current.CompanyName = "IRENE SOLUTIONS SL";
 				_Current.CompanyARInvoiceText = "ACERO INOXIDABLE";
 				_Current.UECountries = "DE,AT,BE,BG,CY,HR,DK,SK,SI,ES,EE,FI,FR,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,GB,CZ,RO,SE";
 			}
