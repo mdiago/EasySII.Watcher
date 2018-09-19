@@ -29,9 +29,28 @@ La ubicación por defecto de la carpeta de salida está en la ruta: C:\ProgramDa
 
 Al copiar cualquier archivo XML en la carpeta de salida este será transmitido al SII. Si el fichero creado es un archivo CSV, este se utilizará para la creación y envío de los archivos XML al SII.
 
-* Estructura del fichero CSV para serialización y envío masivo de facturas
+### Estructura del fichero CSV para serialización y envío masivo de facturas ###
 
 El archivo CSV se debe componer de 21 columnas y debe estar codificado en Windows ANSI codepage 1252.  
 - Columna 0 (?????):  
 - Columna 1: Documento. Número de factura o documento a procesar.
+- Columna 2: Fecha. Fecha de emisión del documento a procesar.  
+- Columna 03: 
+- Columna 04: 
+- Columna 05: NIF contraparte. Identificador fiscal de la contraparte.
+- Columna 06: Nombre contraparte. Denominación del interlocutor de la operación (cliente, acreedor...9.
+- Columna 07: 
+- Columna 08: Base imponible.
+- Columna 09: Tipo impositivo IVA.
+- Columna 10: Cuota IVA.
+- Columna 11:
+- Columna 12:
+- Columna 13:
+- Columna 14: Número factura rectificada. Número de la factura rectificada para rectificaciones de facturas emitidas.
+- Columna 15: Fecha factura rectificada. Fecha de la factura rectificada para rectificaciones de facturas emitidas.
+- Columna 16:
+- Columna 17: País. Código ISO de pais de la contraparte de la operación.
+- Columna 18:
+- Columna 19:
+- Columna 20:
 
