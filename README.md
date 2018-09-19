@@ -31,5 +31,5 @@ Al copiar cualquier archivo XML en la carpeta de salida este será transmitido a
 
 * Estructura del fichero CSV para serialización y envío masivo de facturas
 
-El archivo CSV se debe componer de 25 columnas y debe estar codificado en Windows ANSI codepage 1252.
+El archivo CSV se debe componer de 21 columnas y debe estar codificado en Windows ANSI codepage 1252.
 
