@@ -19,11 +19,11 @@ La ubicación por defecto de la carpeta de salida está en la ruta: C:\ProgramDa
 
 * Ubicación por defecto carpeta de entrada
 
-La ubicación por defecto de la carpeta de salida está en la ruta: C:\ProgramData\EasySIIWatcher\Inbox. Se puede cambiar mediante las opciones de configuración del programa.
+La ubicación por defecto de la carpeta de entrada está en la ruta: C:\ProgramData\EasySIIWatcher\Inbox. Se puede cambiar mediante las opciones de configuración del programa.
 
 * Ubicación por defecto carpeta de enviados
 
-La ubicación por defecto de la carpeta de salida está en la ruta: C:\ProgramData\EasySIIWatcher\History. Se puede cambiar mediante las opciones de configuración del programa.
+La ubicación por defecto de la carpeta de envíados está en la ruta: C:\ProgramData\EasySIIWatcher\History. Se puede cambiar mediante las opciones de configuración del programa.
 
 * Utilización básica del servicio
 
