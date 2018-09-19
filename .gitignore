@@ -1,0 +1,7 @@
+**/obj
+**/bin
+*.suo
+*.user
+*.sln.docstates
+.vs/
+EasySII.Watcher.Installer/
