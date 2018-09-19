@@ -32,20 +32,20 @@ Al copiar cualquier archivo XML en la carpeta de salida este será transmitido a
 ### Estructura del fichero CSV para serialización y envío masivo de facturas ###
 
 El archivo CSV se debe componer de 21 columnas y debe estar codificado en Windows ANSI codepage 1252.  
-- Columna 00 (?????):  
+- Columna 00 Tipo documento. 'FE' para facturas emitidas, 'FR' para facturas recibidas, 'OI' para determinadas operaciones intracomunitarias.  
 - Columna 01: Documento. Número de factura o documento a procesar.
-- Columna 02: Fecha. Fecha de emisión del documento a procesar.  
-- Columna 03: 
-- Columna 04: 
+- Columna 02: Fecha emisión. Fecha de emisión del documento a procesar.  
+- Columna 03: Fecha registro. Fecha en la que el documento ha sido registrado en contabilidad.
+- Columna 04: Fecha contable. Fecha de contabilización del registro.
 - Columna 05: NIF contraparte. Identificador fiscal de la contraparte.
-- Columna 06: Nombre contraparte. Denominación del interlocutor de la operación (cliente, acreedor...9.
-- Columna 07: 
-- Columna 08: Base imponible.
+- Columna 06: Nombre contraparte. Denominación del interlocutor de la operación (cliente, acreedor...).
+- Columna 07: Descripción operación.
+- Columna 08: Base imponible IVA. Para facturas con múltiples bases y tipos hay que incluir una línea por cada tipo.
 - Columna 09: Tipo impositivo IVA.
 - Columna 10: Cuota IVA.
-- Columna 11:
-- Columna 12:
-- Columna 13:
+- Columna 11: Indicador servicio. En las operaciones que requieren desglose por tipo operación, se diferencia a los servicios de las entregas marcando el registro con una 'X' en esta columna. Si el indicador de servicio contiene una 'X' el detalle se serializara como servicio en el bloque DesgloseTipoOperacion.
+- Columna 12: Indicador inversión sujeto pasivo. En las operaciones con inversión de sujeto pasivo, se marcará el registro con una 'X' en esta columna. 
+- Columna 13: Indicador de importación. 'X' para indicar de que se trata de una liquidación de IVA de aduana normal (en este caso se incluye como contraparte a la empresa informadora, y se incluye el número de DUA como número de documento). 'LC' para indicar que se trata de una liquidación complementaria de aduanas.
 - Columna 14: Número factura rectificada. Número de la factura rectificada para rectificaciones de facturas emitidas.
 - Columna 15: Fecha operación / Fecha factura rectificada. Cuando se trata de una factua rectificativa (existe un número de factura    rectificada en la columna 14) esta columna se utiliza como la fecha de la factura rectificada. Si la columna 14 está vacía, esta columna se entiende como Fecha operación.
 - Columna 16:
