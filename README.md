@@ -32,7 +32,7 @@ Al copiar cualquier archivo XML en la carpeta de salida este será transmitido a
 ### Estructura del fichero CSV para serialización y envío masivo de facturas ###
 
 El archivo CSV se debe componer de 21 columnas y debe estar codificado en Windows ANSI codepage 1252.  
-- Columna 00 Tipo documento. 'FE' para facturas emitidas, 'FR' para facturas recibidas, 'OI' para determinadas operaciones intracomunitarias.  
+- Columna 00: Tipo documento. 'FE' para facturas emitidas, 'FR' para facturas recibidas, 'OI' para determinadas operaciones intracomunitarias.  
 - Columna 01: Documento. Número de factura o documento a procesar.
 - Columna 02: Fecha emisión. Fecha de emisión del documento a procesar.  
 - Columna 03: Fecha registro. Fecha en la que el documento ha sido registrado en contabilidad.
