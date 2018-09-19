@@ -36,7 +36,7 @@ El archivo CSV se debe componer de 21 columnas y debe estar codificado en Window
 - Columna 01: Documento. Número de factura o documento a procesar.
 - Columna 02: Fecha emisión. Fecha de emisión del documento a procesar.  
 - Columna 03: Fecha registro. Fecha en la que el documento ha sido registrado en contabilidad.
-- Columna 04: Fecha contable. Fecha de contabilización del registro.
+- Columna 04: Fecha contable. Fecha de contabilización del documento.
 - Columna 05: NIF contraparte. Identificador fiscal de la contraparte.
 - Columna 06: Nombre contraparte. Denominación del interlocutor de la operación (cliente, acreedor...).
 - Columna 07: Descripción operación.
