@@ -39,6 +39,7 @@
 
 using System.ComponentModel;
 using System.Configuration.Install;
+using System.Diagnostics;
 using System.ServiceProcess;
 
 namespace EasySII.Watcher.Service
@@ -58,6 +59,8 @@ namespace EasySII.Watcher.Service
 
         private void EasySIIWInstaller_AfterInstall(object sender, InstallEventArgs e)
         {
+            var process = Process.Start($"{Context.Parameters["path"]}\\EasySII.Watcher.Admin.exe");
+            process.WaitForExit();
             EasySII.Watcher.Settings.Save();
             EasySII.Settings.Save();
             new ServiceController(EasySIIWInstaller.ServiceName).Start();

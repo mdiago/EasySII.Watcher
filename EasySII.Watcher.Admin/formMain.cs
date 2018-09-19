@@ -190,6 +190,21 @@ namespace EasySII.Watcher.Admin
             return $"{grdCertificates.SelectedRows[0].Cells[0].Value}";
         }
 
+
+        /// <summary>
+        /// Devuelve el texto descriptivo del certificado seleccionado
+        /// (subjectName + IssuerName).
+        /// </summary>
+        /// <returns>Huella del certificado seleccionado o null.</returns>
+        private string GetSelectedCertificateText()
+        {
+            if (grdCertificates.SelectedRows.Count == 0)
+                return "";
+
+            return $"{grdCertificates.SelectedRows[0].Cells[1].Value}" +
+                $"{grdCertificates.SelectedRows[0].Cells[2].Value}";
+        }
+
         private void btOutbox_Click(object sender, EventArgs e)
         {
             txOutbox.Text = $"{GetFolder()}\\";
@@ -238,27 +253,54 @@ namespace EasySII.Watcher.Admin
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
 
+            string certText = GetSelectedCertificateText();
+
+            if (!string.IsNullOrEmpty(certText))
+            {
+                if (!certText.Contains(txTaxID.Text))
+                {
+                    var result = MessageBox.Show($"No se ha encontrado referencia al NIF {txTaxID.Text}" +
+                        $" en el certificado seleccionado.\n\n¿Desea cerrar y grabar datos de todos modos?",
+                         "VERIFICACIÓN CERTIFICADO", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+
+                    if (result != DialogResult.OK)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+                }
+            }
+
+            ServiceController serviceController = null;
+
             try
             {
-                var serviceController = new ServiceController("Monitor de carpetas de EasySII");
+                serviceController = new ServiceController("Monitor de carpetas de EasySII");
+            }
+            catch
+            {
+            }
 
-                bool start = false;
+            bool start = false;
 
+            if (serviceController != null)
+            {
                 if (serviceController.Status ==
                     ServiceControllerStatus.Running)
                 {
                     serviceController.Stop();
                     start = true;
                 }
+            }
 
-                SaveSettings();
+            SaveSettings();
 
+            if (serviceController != null)
+            {
                 if (start)
                     serviceController.Start();
             }
-            catch
-            {
-            }
+         
 
         }
 
